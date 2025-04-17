@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.8' // Make sure this name matches the Maven version configured in Jenkins
+        maven 'Maven' // Make sure this name matches the Maven version configured in Jenkins
     }
 
     environment {
-        TOMCAT_URL = 'http://localhost:9090/manager/text'
+        TOMCAT_URL = 'http://localhost:9090/manager/text'vdfshsug
         TOMCAT_CREDENTIALS = 'tomcat-credentials'
     }
 
     stages {
         stage('Clone Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/archis04/myfirst.git'
+                git branch: 'main', url: 'https://github.com/Varun4104/myFirst.git'
             }
         }
 
